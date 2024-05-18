@@ -1,3 +1,8 @@
-Benjamín Gutierrez 202004621-2
-Carolina Muñoz 202004647-6
-Sofía Parada Hormazábal 202004671-9
+Benjamín Gutierrez 202004621-2 :
+Creo la función del problema 1 y fue haciendo mejoras en el problema 1 y 2.
+
+Carolina Muñoz 202004647-6:
+Fue haciendo mejoras en el problema 1 y 2 e hizo la lectura del archivo input-1.dat para retornar en un archivo output.dat.
+
+Sofía Parada Hormazábal 202004671-9:
+Creo la función del problema 2 y fue haciendo mejoras en el problema 1 y 2.

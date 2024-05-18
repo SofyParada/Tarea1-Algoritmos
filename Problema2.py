@@ -1,37 +1,32 @@
 
 def min_suma_gaps_cuadrado(L, n, ladrillos):
-    # dp array to store the minimum sum of gaps squared
+    # dp para almacenar la suma mínima de espacios al cuadrado
     dp = [float('inf')] * (n + 1)
-    dp[0] = 0  # No gaps when there are no bricks
+    dp[0] = 0  #si no hay ladrillos no hay gaps
     
     for i in range(1, n + 1):
-        current_sum = 0
+        sum_actual = 0
         for j in range(i, n + 1):
-            current_sum += int(ladrillos[j - 1])
-            if current_sum > L:
+            sum_actual += int(ladrillos[j - 1])
+            if sum_actual > L:
                 break
-            gap = L - current_sum
+            gap = L - sum_actual
             dp[j] = min(dp[j], dp[i - 1] + gap * gap)
     
     return dp[n]
 
-# Lectura de la entrada desde el archivo input-1.dat
-x = input() #"6 9"
-L, n= map(int, x.strip().split(" "))
 
-print(L, n)
-
-
-while x != "": 
-    i = input() 
-    ladrillos = i.strip().split(" ")
-
-    resultado = min_suma_gaps_cuadrado(L, n, ladrillos)
-    print(resultado)
-    
-    try:
-        x= input()
+while True: 
+    try: 
+        # Lectura por entrada estandar desde el archivo input-1.dat
+        x = input()
         L, n = map(int, x.strip().split(" "))
-        print(L,n)
-    except EOFError as er:
-        x = ""
+        i = input() 
+        ladrillos = [int(i) for i in i.strip().split(" ")]
+
+        resultado = min_suma_gaps_cuadrado(L, n, ladrillos)
+        #print(pared)
+        print(resultado)
+ 
+    except EOFError:
+        break
